@@ -1,7 +1,7 @@
 # This playbook will gather facts about targeted host or group and save them to a log file
 
 ---
-  # host passed from command line: ansible-playbook gather_server_facts.yml -e "variable_host=HOST_IN_INVENTORY)"
+  # host passed from command line: ansible-playbook gather_server_facts.yml -e "variable_host=HOST_IN_INVENTORY"
   # by default it will lookup variable_host from the file /etc/ansible/hosts 
 - hosts: "{{ variable_host | default('all') }}"
   gather_facts: false
