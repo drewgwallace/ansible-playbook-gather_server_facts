@@ -1,0 +1,5 @@
+---
+
+- include_tasks:
+    name: gather_server_facts.yaml
+  when: ansible_os_family == 'Debian'

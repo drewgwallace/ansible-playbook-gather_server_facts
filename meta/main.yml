@@ -1,0 +1,20 @@
+---
+dependencies: []
+
+galaxy_info:
+  author: drewgwallace
+  description: Save gathered facts to logfile.
+  company: 
+  license: MIT
+  min_ansible_version: 2.4
+  platforms:
+    - name: Debian
+      versions:
+      - all
+    - name: Ubuntu
+      versions:
+      - all
+  galaxy_tags:
+    - system
+    - facts
+    - logs

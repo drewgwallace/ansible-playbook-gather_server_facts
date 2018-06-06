@@ -1,0 +1,27 @@
+# This playbook will gather facts about targeted host or group and save them to a log file
+
+---
+  
+# Obtain a date timestamp
+- set_fact:
+    date_fact: "{{lookup('pipe','date +%Y%m%d')}}"
+
+# Set the path used to save logging
+- set_fact:
+    path_fact: "logs/"
+    
+# Ensure path_fact exists
+- local_action:
+    module: file
+    state: directory
+    path: "{{ path_fact }}"
+                
+# Gather-Facts
+- setup:
+  register: out
+  
+# Write facts to log file
+- local_action:
+    module: copy
+    content: "~~~ {{ date_fact }} {{ inventory_hostname }} Ansible Gather-Facts Diagnostic ~~~\n{{ out | to_nice_yaml }}"
+    dest: "{{ path_fact }}{{ inventory_hostname }}.yml"
