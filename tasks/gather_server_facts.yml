@@ -1,7 +1,9 @@
-# This playbook will gather facts about targeted host or group and save them to a log file
-
+# Purpose: This playbook will gather facts about targeted host or group and save them to a log file
+# Last Updated: 2018.06.11
+# Notes:
 ---
-  
+
+
 # Obtain a date timestamp
 - set_fact:
     date_fact: "{{lookup('pipe','date +%Y%m%d')}}"
