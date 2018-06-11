@@ -1,7 +1,7 @@
+---
 # Purpose: Main task import for gather_server_facts
 # Last Updated: 2018.06.11
 # Notes:
----
 
 
 - include_tasks:
