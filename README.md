@@ -11,7 +11,7 @@
     - hosts: all
       tasks:
       - include_role:
-          name: drewgwallace.ansible-role-gather_server_facts
+          name: drewgwallace.gather_server_facts
 </pre>
 
 ----
