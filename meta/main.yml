@@ -9,7 +9,6 @@ dependencies: []
 galaxy_info:
   author: drewgwallace
   description: Save gathered facts to logfile.
-  company: 
   license: MIT
   min_ansible_version: 2.4
   platforms:
